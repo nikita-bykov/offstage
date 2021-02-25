@@ -30,7 +30,7 @@ jobs:
       - name: Package
         # Use GNU tar due to a strange issue with BSD tar on OSX runners.
         # https://github.com/actions/virtual-environments/issues/2619
-        run: gtar -zcv -C target/release -f offstage-macos.tar.gz offstage
+        run: tar -zcv -C target/release -f offstage-macos.tar.gz offstage
       - uses: actions/upload-artifact@v2
         with:
           name: macos
